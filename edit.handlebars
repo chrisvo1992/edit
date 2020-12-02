@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+        <body>
+            <fieldset>
+            <label>Edit your row: </label>
+            <form action="/" method="POST">
+            {{#each results}}
+                <label>Name</label>
+                <input type="text" id="name" name='name' value= {{this.name}}> <br>
+                <label>Reps</label>
+                <input type="text" id="reps" name='reps' value={{this.reps}}>  <br>
+                <label>Weight</label>
+                <input type="text" id="weight" name='weight' value={{this.weight}}>  <br>
+                <label>Date (must be "year-month-date")</label>
+                <input type="text" id="date" name='date'value={{this.date}}> <br>
+                <label>unit (1 for lbs, 0 for kgs)</label>
+                <input type="text" id="unit" name='unit'value={{this.lbs}}> 
+                <input type='hidden' id='id' name='id' value={{this.id}}>
+            {{/each}}
+                <br>
+                <input type='submit' id='new_entry' name='Edit Item'>
+            </form>
+        </fieldset>
+        </body>
+</html>
